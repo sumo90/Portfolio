@@ -8,7 +8,7 @@
 }
 body {
   margin: 1vw;
-
+  animation: fadeInAnimation ease 2s;
   background-color: #171717; /* Gunmetal Grey */
   color: #ffffff; /* White text for contrast */
 }
@@ -429,5 +429,13 @@ a:hover {
   .about .left {
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
