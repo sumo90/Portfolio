@@ -20,8 +20,8 @@ Welcome to my portfolio! This repository showcases my personal website, where yo
 
 
 - **Homepage**:
-  ![Homepage](ss1.png)
-  ![Homepage](ss2.png)
+  ![Homepage](images/ss1.png)
+  ![Homepage](images/ss2.png)
 
 ## Demo
 
