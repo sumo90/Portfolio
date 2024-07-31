@@ -21,6 +21,7 @@ Welcome to my portfolio! This repository showcases my personal website, where yo
 
 - **Homepage**:
   ![Homepage](Screenshot2.png)
+  ![Homepage](ss.png).
 
 ## Demo
 
