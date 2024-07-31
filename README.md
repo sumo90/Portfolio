@@ -20,7 +20,7 @@ Welcome to my portfolio! This repository showcases my personal website, where yo
 
 
 - **Homepage**:
-  ![Homepage](screenshot2.png)
+  ![Homepage](Screenshot2.png)
 
 ## Demo
 
