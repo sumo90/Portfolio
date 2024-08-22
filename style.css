@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@
 }
 body {
   margin: 1vw;
-  animation: fadeInAnimation ease 2s;
+  animation: ease-in 2s;
   background-color: #171717; /* Gunmetal Grey */
   color: #ffffff; /* White text for contrast */
 }
@@ -17,7 +17,7 @@ body {
   height: 5vw;
   margin-bottom: 0.5vw;
 }
-.logobox {
+/* .logobox {
   height: 5vw;
   width: 3vw;
   margin-right: 0.5vw;
@@ -35,13 +35,11 @@ body {
 
   border-radius: 50px;
   border: 2px solid #27272a;
-}
+} */
 .menu {
   display: flex;
-
+  width: 100%;
   height: 100%;
-  width: 95vw;
-
   border: 2px solid #27272a;
   background-color: #18181b;
   border-radius: 50px;
@@ -62,7 +60,7 @@ a:hover {
 
 .about {
   display: flex;
-
+  justify-content: center;
   height: max-content;
   background-color: #171717;
   margin-bottom: 0.5vw;
@@ -96,11 +94,12 @@ a:hover {
 .about .right {
   display: flex;
   justify-content: space-between;
-  width: calc(98vw - 3.5vw - 7px);
+  max-width: 1024px;
   border: 2px solid #27272a;
   border-radius: 50px;
-
+  padding: 18px;
   background-color: #000;
+  overflow: hidden;
 }
 
 .about .right .image {
@@ -134,17 +133,17 @@ a:hover {
 /* education and skills */
 .knowledge {
   display: flex;
+  justify-content: center;
   height: max-content;
   margin-bottom: 0.5vw;
 }
 .knowledge .left {
   width: 3vw;
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: center;
   align-items: center;
+  justify-self: center;
   margin-right: 0.5vw;
+  font-size: 40px;
 }
 .knowledge .left h2 {
   display: flex;
@@ -164,9 +163,10 @@ a:hover {
   padding-bottom: 30px;
 }
 .knowledge .right {
-  display: flex;
-  width: 97.5vw;
-  height: max-content;
+  display: flex; /* Create two equal-width columns */
+  max-width: 1024px; /* Set the maximum width */
+  width: 100%; /* Set the width to 100% of the available space within its parent */
+  height: max-content; /* Let the height adjust based on content */
 }
 .knowledge .right .education {
   background-color: #000;
@@ -199,17 +199,17 @@ a:hover {
 /* project work */
 .projects {
   display: flex;
+  justify-content: center;
   height: max-content;
   margin-bottom: 0.5vw;
 }
 .projects .left {
   width: 3vw;
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: center;
   align-items: center;
+  justify-self: center;
   margin-right: 0.5vw;
+  font-size: 40px;
 }
 .projects .left h2 {
   display: flex;
@@ -229,19 +229,19 @@ a:hover {
   padding-bottom: 30px;
 }
 .projects .right {
-  display: flex;
-  width: 97.5vw;
+  display: grid;
+  max-width: 1024px;
+  padding: 10px;
+  gap: 10px;
   height: max-content;
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   background-color: #000;
   border: 2px solid #27272a;
   border-radius: 50px;
 }
-.projects .right .prj {
-  width: 100%;
-  display: flex;
-  margin: 1%;
-}
-.projects .right .prj .prjcell {
+
+.projects .right .prjcell {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -253,9 +253,10 @@ a:hover {
   margin: 2px;
   padding: 15px;
 }
-.projects .right .prj .prjcell button {
+.projects .right .prjcell button {
   cursor: pointer;
-  display: flex;
+  position: relative;
+  bottom: 0;
   align-items: center;
   margin: 0 auto;
   width: fit-content;
@@ -265,7 +266,7 @@ a:hover {
   border-radius: 50px;
 }
 
-.projects .right .prj .prjcell img {
+.projects .right .prjcell img {
   cursor: pointer;
   object-fit: cover;
   width: 100%;
@@ -274,28 +275,124 @@ a:hover {
   margin-top: 10px;
 }
 
-.projects .right .prj .prjcell p {
+.projects .right .prjcell p {
   font-size: 15px;
   font-style: italic;
   color: #9c9ca6;
 }
+/*SKILL METER*/
+.meter {
+  display: flex;
+  justify-content: center;
+  height: max-content;
+  margin-bottom: 0.5vw;
+}
+.meter .left {
+  width: 3vw;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  margin-right: 0.5vw;
+  font-size: 40px;
+}
+.meter .left h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  border: 2px solid #27272a;
+  width: 100%;
+  border: 2px solid #27272a;
+  color: rgb(255, 156, 242);
+  background-color: #000;
+  border-radius: 50px;
+  font-size: 2vw;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.meter .right {
+  max-width: 1024px;
+  width: 100%;
+  height: max-content;
+  background-color: #000;
+  border: 2px solid #27272a;
+  border-radius: 50px;
+  font-family: "Varela Round", sans-serif;
+}
+.meter .right .container {
+  display: flex;
+  height: max-content;
+  gap: 10px;
+  padding: 10px;
+}
+.technical-skills {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 50%;
+  border: 2px solid #27272a;
+  border-radius: 50px;
+}
+.professional-skills {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 50%;
+  border: 2px solid #27272a;
+  border-radius: 50px;
+}
+.meter .right h2 {
+  text-align: center;
+}
+.meter .right .skill {
+  padding-top: 10px;
+}
+.meter .right .skill .skillinfo {
+  display: flex;
+  align-items: center;
+}
+.meter .right .skill-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.meter .right .skill-bar {
+  background-color: #e0e0e0;
+  flex: 1;
+  height: 10px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.meter .right .skill-level {
+  height: 100%;
+  background-color: rgb(255, 156, 242);
+  border-radius: 0;
+}
+
 /* contact section */
 .contact {
   display: flex;
   height: max-content;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   margin: 50px;
 }
-.content {
-  width: 50%;
 
-  align-items: center;
-
-  text-align: center;
+.contact i {
+  font-size: 24px;
+  cursor: pointer;
+}
+.contact a {
+  font-size: 24px;
+  color: white; /* Or any other desired color */
 }
 /* Mobile Devices (Portrait) and Tablets */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   body {
     margin: 2vw;
   }
@@ -429,6 +526,19 @@ a:hover {
   .about .left {
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+  .meter {
+    display: block;
+  }
+  .meter .right .container {
+    display: block;
+  }
+  .technical-skills {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .professional-skills {
+    width: 100%;
   }
 }
 @keyframes fadeInAnimation {
