@@ -499,7 +499,8 @@ a:hover {
 
   .about .left,
   .knowledge .left,
-  .projects .left {
+  .projects .left,
+  .meter .left {
     width: auto;
     display: flex;
     justify-content: center;
@@ -510,7 +511,8 @@ a:hover {
 
   .about .left h2,
   .knowledge .left h2,
-  .projects .left h2 {
+  .projects .left h2,
+  .meter .left h2 {
     writing-mode: vertical-lr;
     transform: rotate(-90deg);
     text-align: center;
